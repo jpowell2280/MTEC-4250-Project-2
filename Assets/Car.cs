@@ -4,9 +4,37 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    bool carMovement;     
-    bool playerMovement;
-       
+    private bool playerMovement; //boolean player movement
+    private bool carMovement;
+
+    public Car(object carMovementForward)
+    {
+        this.carMovementForward = carMovementForward;
+    }
+
+    private object carMovementBackward;
+
+    public object GetCarMovementBackward()
+    {
+        return carMovementBackward;
+    }
+
+    public void SetCarMovementBackward(object value)
+    {
+        carMovementBackward = value;
+    }
+
+    private object carMovementForward;
+    public object GetCarMovementForward()
+    {
+        return carMovementForward;
+    }
+
+    public void SetCarMovementForward(object value)
+    {
+        carMovementForward = value;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +50,7 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float carMovementForward = carMovement.forward; //the car moves forward
-        float carMovementBackward = carMovement.backward; //the car moves backward
+        _ = GetCarMovementForward(); //the car moves forward
+        _ = GetCarMovementBackward(); //the car moves backward
     }
 }
