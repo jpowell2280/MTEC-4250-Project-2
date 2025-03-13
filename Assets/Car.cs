@@ -7,6 +7,11 @@ public class Car : MonoBehaviour
     private bool playerMovement; //boolean player movement
     private bool carMovement;
 
+    public Car(bool carMovement)
+    {
+        this.carMovement = carMovement;
+    }
+
     public Car(object carMovementForward)
     {
         this.carMovementForward = carMovementForward;
